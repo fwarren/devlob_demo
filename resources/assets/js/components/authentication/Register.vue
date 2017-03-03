@@ -24,7 +24,7 @@
 
 
 <script>
-    export defualt {
+    export default {
         data () {
             return {
                 name: '',
@@ -33,7 +33,7 @@
             }
         }
     }
-<script>
+</script>
 
 <style>
 

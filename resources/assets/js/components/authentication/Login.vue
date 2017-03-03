@@ -20,7 +20,7 @@
 
 
 <script>
-    export defualt {
+    export default {
         data () {
             return {
                 email: '',
@@ -28,7 +28,7 @@
             }
         }
     }
-<script>
+</script>
 
 <style>
 
