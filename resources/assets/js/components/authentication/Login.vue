@@ -37,9 +37,10 @@
                     password: this.password
 
                 }
-                axios.post('/oauth/token', data).then(response => 
-                    this.$auth.setToken(response.data.access_token, response.data.expires_in + Date.now())
-                )
+                axios.post('/oauth/token', data).then(response => {
+                    this.$auth.setToken(response.data.access_token, response.data.expires_in + Date.now());
+                    this.$router.push('/feed');
+                })
             }
         }
     }
