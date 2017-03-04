@@ -38,7 +38,7 @@
 
                 }
                 axios.post('/oauth/token', data).then(response => 
-                    console.log(response)
+                    this.$auth.setToken(response.data.access_token, response.data.expires_in + Date.now())
                 )
             }
         }

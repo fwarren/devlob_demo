@@ -2,10 +2,12 @@ require('./bootstrap');
 
 import Vue        from 'vue'
 import App from './App.vue';
-import VueRouter  from 'vue-router'
 import router from './routes';
+import VueRouter  from 'vue-router'
+import Auth from './packages/auth/Auth.js'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
+Vue.use(Auth);
 
 const app = new Vue({
     el: '#app',
@@ -13,11 +15,3 @@ const app = new Vue({
     template: '<app></app>',
     router
 })
-
-/*
-const app = new Vue({
-    el: '#app',
-    render: h => h(App),
-    router: Router
-});
-*/
