@@ -23343,6 +23343,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             email: '',
             password: ''
         };
+    },
+
+    methods: {
+        login: function login() {
+            var data = {
+                client_id: 2,
+                client_secret: '52EmEDJnzb4t6TW1DDwl8PAf8JWo28UKA8fC4EoG',
+                grant_type: 'password',
+                username: this.email,
+                password: this.password
+
+            };
+            axios.post('/oauth/token', data).then(function (response) {
+                return console.log(response);
+            });
+        }
     }
 };
 
@@ -25849,7 +25865,7 @@ exports = module.exports = __webpack_require__(2)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -43317,7 +43333,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }
   })]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-success pull-right"
+    staticClass: "btn btn-success pull-right",
+    on: {
+      "click": _vm.login
+    }
   }, [_vm._v("Login")])]), _vm._v(" "), _vm._m(0)])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('div', [_c('div')])])
